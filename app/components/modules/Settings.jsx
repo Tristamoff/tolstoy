@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import user from 'app/redux/User';
 import {translate} from 'app/Translator';
 import {ALLOWED_CURRENCIES} from 'config/client_config'
+import {ALLOWED_THEMES} from 'config/client_config'
 import store from 'store';
 import transaction from 'app/redux/Transaction'
 import o2j from 'shared/clash/object2json'
@@ -50,6 +51,10 @@ class Settings extends React.Component {
 
     handleCurrencyChange(event) {
         store.set('currency', event.target.value)
+    }
+
+    handleThemeChange(event) {
+        store.set('theme', event.target.value)
     }
 
     handleLanguageChange = (event) => {
@@ -224,6 +229,18 @@ class Settings extends React.Component {
                         <input type="url" {...website.props} maxLength="100" autoComplete="off" />
                     </label>
                     <div className="error">{website.blur && website.touched && website.error}</div>
+
+                    {/* CHOOSE THEME */}
+                    <label>{translate('choose_theme')}
+                        <select defaultValue={store.get('theme')} onChange={this.handleThemeChange}>
+                            {
+                                ALLOWED_THEMES.map(i => {
+                                    return <option key={i} value={i}>{i}</option>
+                                })
+                            }
+                        </select>
+                    </label>
+                    <div className="error"></div>
 
                     <br />
                     {state.loading && <span><LoadingIndicator type="circle" /><br /></span>}
