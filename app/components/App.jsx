@@ -20,6 +20,7 @@ import {WIKI_URL, LANDING_PAGE_URL, ABOUT_PAGE_URL, WHITEPAPER_URL, SEGMENT_ANAL
 import MiniHeader from 'app/components/modules/MiniHeader';
 import PageViewsCounter from 'app/components/elements/PageViewsCounter';
 import LocalizedCurrency from 'app/components/elements/LocalizedCurrency';
+import { themeName } from 'app/components/elements/ThemeChecker';
 
 class App extends React.Component {
     constructor(props) {
@@ -156,6 +157,7 @@ class App extends React.Component {
     }
 
     render() {
+
         const {location, params, children, flash, new_visitor,
             depositSteem, signup_bonus} = this.props;
         const lp = false; //location.pathname === '/';
@@ -235,6 +237,10 @@ class App extends React.Component {
                     </div>
                 </div>
             );
+        }
+
+        if (typeof document !== 'undefined') {
+            document.getElementsByTagName('body')[0].setAttribute("data-theme", themeName());
         }
 
         return <div className={'App' + (lp ? ' LP' : '') + (ip ? ' index-page' : '') + (miniHeader ? ' mini-header' : '')}

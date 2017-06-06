@@ -50,8 +50,6 @@ export default function ServerHTML({ body, assets, locale, title, meta }) {
             <title>{page_title}</title>
         </head>
         <body>
-        <script src="/static/js/theme.js"></script>
-
         <div id="content" dangerouslySetInnerHTML={ { __html: body } }></div>
         {assets.script.map((href, idx) => <script key={ idx } src={ href }></script>) }
         {config.js_plugins_path && <script src={config.js_plugins_path}></script>}
