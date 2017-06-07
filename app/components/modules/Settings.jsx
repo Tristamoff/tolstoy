@@ -56,8 +56,8 @@ class Settings extends React.Component {
     handleThemeChange(event) {
         const theme = event.target.value
         store.set('theme', theme)
-        if (typeof document !== 'undefined') {
-            document.getElementsByTagName('body')[0].setAttribute("data-theme", theme);
+        if (document) {
+            document.body.setAttribute("data-theme", theme);
         }
     }
 
@@ -310,9 +310,6 @@ export default connect(
     dispatch => ({
         changeLanguage: (language) => {
             dispatch(user.actions.changeLanguage(language))
-        },
-        changeTheme: (theme) => {
-            dispatch(user.actions.changeTheme(theme))
         },
         updateAccount: ({successCallback, errorCallback, ...operation}) => {
             const options = {type: 'account_update', operation, successCallback, errorCallback}

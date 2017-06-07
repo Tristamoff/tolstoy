@@ -239,8 +239,8 @@ class App extends React.Component {
             );
         }
 
-        if (typeof document !== 'undefined') {
-            document.getElementsByTagName('body')[0].setAttribute("data-theme", themeName());
+        if (document) {
+            document.body.setAttribute("data-theme", themeName());
         }
 
         return <div className={'App' + (lp ? ' LP' : '') + (ip ? ' index-page' : '') + (miniHeader ? ' mini-header' : '')}
