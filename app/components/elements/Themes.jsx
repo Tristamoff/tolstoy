@@ -1,5 +1,7 @@
 import store from 'store';
-import { DEFAULT_THEME } from 'config/client_config';
+
+export const ALLOWED_THEMES = ['Default', 'Green', 'Red']
+export const DEFAULT_THEME = 'Default'
 
 export function themeName() {
     var theme_name = DEFAULT_THEME;

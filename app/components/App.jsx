@@ -20,7 +20,7 @@ import {WIKI_URL, LANDING_PAGE_URL, ABOUT_PAGE_URL, WHITEPAPER_URL, SEGMENT_ANAL
 import MiniHeader from 'app/components/modules/MiniHeader';
 import PageViewsCounter from 'app/components/elements/PageViewsCounter';
 import LocalizedCurrency from 'app/components/elements/LocalizedCurrency';
-import { themeName } from 'app/components/elements/ThemeChecker';
+import { themeName } from 'app/components/elements/Themes';
 
 class App extends React.Component {
     constructor(props) {
