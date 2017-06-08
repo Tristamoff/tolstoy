@@ -239,7 +239,7 @@ class App extends React.Component {
             );
         }
 
-        if (document) {
+        if (process.env.BROWSER) {
             document.body.setAttribute("data-theme", themeName());
         }
 
