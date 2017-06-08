@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import user from 'app/redux/User';
 import {translate} from 'app/Translator';
 import {ALLOWED_CURRENCIES} from 'config/client_config'
-import {ALLOWED_THEMES} from 'app/components/Themes'
+import {ALLOWED_THEMES} from 'app/components/elements/Themes'
 import store from 'store';
 import transaction from 'app/redux/Transaction'
 import o2j from 'shared/clash/object2json'
