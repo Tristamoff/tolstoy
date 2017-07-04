@@ -1,6 +1,6 @@
 $th_light: #f0f0f0;
 $th_dark: #717171;
-
+$th_d_dark: #5a5a5a;
 
 body[data-theme="dark"] {
   background-image: url('../../assets/images/themes/dark/background.jpg');
@@ -15,12 +15,7 @@ body[data-theme="dark"] {
       }
     }
   }
- /* div.UserWallet {
-    color: $black;
-    a {
-      color: inherit;
-    }
-  }*/
+
   div.UserWallet {
     color: $black;
     .row {
@@ -208,13 +203,11 @@ body[data-theme="dark"] {
       }
       &.active {
         background-color: #949494;
-     /*   color: $th_light;*/
       }
     }
   }
 
   .PostSummary {
- /*   box-shadow: 0 0 10px rgba(93, 46, 3, 0.5);*/
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -222,7 +215,6 @@ body[data-theme="dark"] {
     background-color: rgb(247, 247, 247);
   }
   .PostSummary:hover {
-    /*box-shadow: 0 0 10px $th_brown;*/
     box-shadow: 0 0 20px $white;
   }
 
@@ -252,12 +244,12 @@ body[data-theme="dark"] {
   input[type=button]:disabled,
   input[type=button].disabled, input[type=button].disabled:focus,
   input[type=submit].disabled, input[type=submit].disabled:focus {
-    background-color: #5a5a5a;
+    background-color: $th_d_dark;
   }
 
   form {
     .button {
-      background-color: #5a5a5a;
+      background-color: $th_d_dark;
       color: $th_light;
     }
     .button:hover, .button:focus {
@@ -265,8 +257,8 @@ body[data-theme="dark"] {
     }
     .button.hollow {
       /*color: $th_light;*/
-      color: #5a5a5a;/*для формы передачи токенов*/
-      border: 1px solid #5a5a5a;
+      color: $th_d_dark;/*для формы передачи токенов*/
+      border: 1px solid $th_d_dark;
     }
     .button.hollow.no-border {
       border: none;
@@ -289,8 +281,8 @@ body[data-theme="dark"] {
     }
   }
   .button.hollow {
-    color: #5a5a5a;
-    border: 1px solid #5a5a5a;
+    color: $th_d_dark;
+    border: 1px solid $th_d_dark;
   }
   .Feedback a:hover, .Feedback a:focus {
     height: 47px;
@@ -299,12 +291,12 @@ body[data-theme="dark"] {
 
   .Topics {
     .button {
-      background-color: #5a5a5a;
+      background-color: $th_d_dark;
     }
   }
   .ConfirmTransactionForm {
     .button {
-      background-color: #5a5a5a;
+      background-color: $th_d_dark;
     }
     .button.hollow {
       background-color: inherit;
@@ -312,11 +304,11 @@ body[data-theme="dark"] {
   }
   .Topics__filter {
     background-color: #ececec;
-    color: #5a5a5a;
+    color: $th_d_dark;
     margin: -0.5rem 0 0.5rem 0;
     border-radius: 0.25rem 0.25rem 0 0;
     a {
-      color: #5a5a5a;
+      color: $th_d_dark;
     }
     div {
       margin-left: 0;
@@ -335,7 +327,7 @@ body[data-theme="dark"] {
 
   .UserList {
     a {
-      color: #5a5a5a;
+      color: $th_d_dark;
     }
     ul.pager {
       span {
@@ -345,7 +337,7 @@ body[data-theme="dark"] {
     }
   }
   .Topics__title {
-    color: #5a5a5a;
+    color: $th_d_dark;
     border-radius: 0.25rem 0.25rem 0 0;
   }
   .PostsIndex__topics {
@@ -357,7 +349,7 @@ body[data-theme="dark"] {
       padding-left: 1.25rem;
     }
     a {
-      color: #5a5a5a;
+      color: $th_d_dark;
     }
   }
 
@@ -375,6 +367,6 @@ body[data-theme="dark"] {
   .Voting__adjust_weight_down .rangeslider .rangeslider__handle:active,
   .Voting__adjust_weight .rangeslider-horizontal .rangeslider__fill,
   .Voting__adjust_weight_down .rangeslider-horizontal .rangeslider__fill {
-    background-color: #5a5a5a;
+    background-color: $th_d_dark;
   }
 }
